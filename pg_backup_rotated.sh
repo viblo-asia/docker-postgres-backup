@@ -23,9 +23,7 @@ if [ ! $USERNAME ]; then
 	USERNAME="postgres"
 fi;
 
-length=${#BACKUP_DIR}
-last_char=${BACKUP_DIR:length-1:1}
-
+last_char=${BACKUP_DIR:-1:1}
 [[ $last_char != "/" ]] && BACKUP_DIR="$BACKUP_DIR/"; :
 
 ###########################
