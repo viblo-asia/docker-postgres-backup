@@ -25,4 +25,4 @@ RUN echo "$CRON_EXPRESSION pg_backup_rotated" > /var/spool/cron/crontabs/$BACKUP
 
 USER $BACKUP_USER
 
-CMD crond -l 2 -f
+CMD ["crond", "-l 2", "-f"]
